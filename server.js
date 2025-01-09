@@ -1,14 +1,10 @@
-const { createServer } = require('http');
-const next = require('next');
+import { createServer } from 'node:http';
 
-const app = next({ dev: false });
-const handle = app.getRequestHandler();
+const server = createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Hello World!\n');
+});
 
-app.prepare().then(() => {
-  createServer((req, res) => {
-    handle(req, res);
-  }).listen(3000, (err) => {
-    if (err) throw err;
-    console.log('> Ready on http://localhost:3000');
-  });
+server.listen(3000, '127.0.0.1', () => {
+    console.log('Listening on 127.0.0.1:3000');
 });
