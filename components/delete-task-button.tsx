@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:7025/api/task';
 
-export function DeleteTaskButton({ taskId, onTaskDeletedAction }: { taskId: string; onTaskDeletedAction: () => void }) {
+export default function DeleteTaskButton({ taskId, onTaskDeletedAction }: { taskId: string; onTaskDeletedAction: () => void }) {
     const [isDeleting, setIsDeleting] = useState(false);
 
     const handleDelete = async () => {

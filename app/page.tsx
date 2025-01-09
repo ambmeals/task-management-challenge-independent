@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { CreateTaskButton } from '@/components/create-task-button';
-import { EditTaskButton } from '@/components/update-task-button';
+import CreateTaskButton from '@/components/create-task-button';
+import EditTaskButton from '@/components/update-task-button';
 import BootstrapToast from '@/components/bootstrap-toastr';
 import axios from 'axios';
 import https from 'https';

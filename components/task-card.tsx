@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { EditTaskButton } from '@/components/update-task-button';
+import EditTaskButton from '@/components/update-task-button';
 import { Task } from '@/lib/db';
 
 const priorityColors = {

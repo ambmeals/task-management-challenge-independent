@@ -29,7 +29,7 @@ type TaskFormData = z.infer<typeof taskSchema>;
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:7025/api/task';
 
-export function EditTaskButton({ task }: { task: TaskFormData & { id: string } }) {
+export default function EditTaskButton({ task }: { task: TaskFormData & { id: string } }) {
     const [open, setOpen] = useState(false);
 
     const handleSubmit = async (data: TaskFormData) => {

@@ -22,7 +22,7 @@ type TaskFormData = {
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:7025/api/task';
 
-export function CreateTaskButton() {
+export default function CreateTaskButton() {
     const [open, setOpen] = useState(false);
 
     const onSubmit = async (data: TaskFormData) => {
