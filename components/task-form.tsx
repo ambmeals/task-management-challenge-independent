@@ -1,8 +1,8 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
 import {
     Select,
     SelectContent,
@@ -52,7 +52,7 @@ export function TaskForm({ defaultValues, onSubmit, submitButtonLabel }: TaskFor
             <div>
                 <label htmlFor="priority" className="block text-sm font-medium">Priority</label>
                 <Select
-                    onValueChange={(value) =>
+                    onValueChange={(value: string) =>
                         setValue('priority', value as TaskFormData['priority'], { shouldValidate: true })
                     }
                     defaultValue={defaultValues?.priority || 'MEDIUM'}>
@@ -71,7 +71,7 @@ export function TaskForm({ defaultValues, onSubmit, submitButtonLabel }: TaskFor
             <div>
                 <label htmlFor="status" className="block text-sm font-medium">Status</label>
                 <Select
-                    onValueChange={(value) =>
+                    onValueChange={(value: string) =>
                         setValue('status', value as TaskFormData['status'], { shouldValidate: true })
                     }
                     defaultValue={defaultValues?.status || 'TODO'}>
